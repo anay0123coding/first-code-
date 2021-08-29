@@ -1,0 +1,6 @@
+
+
+welcome to my first cod in github
+
+python
+javascript
