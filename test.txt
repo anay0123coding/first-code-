@@ -1,6 +1,7 @@
 
 
-welcome to my first cod in github
+welcome to my first code in github
 
 python
 javascript
+c#
