@@ -71,3 +71,22 @@ elif op == "/":
     div(a,b)
 else:
     print("invalid operator")
+    
+    
+#this is a countdown timer 
+
+import time
+
+def countdown(t):
+
+    while t:
+        mins , secs =  divmod( t , 60)
+        timer = '{:02d} : {:02d}' . format(mins , secs)
+        print(timer )
+        time.sleep(1)
+        t -= 1
+
+    print("you are killed")
+
+t = int(input("enter the number of seconds"))
+countdown(int(t))
