@@ -565,6 +565,9 @@ if __name__ == "__main__":
 
 
 
+# for printing  : anay's "laptop"
+
+print('anay\'s "laptop"')
 
 
 
