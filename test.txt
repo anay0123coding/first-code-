@@ -570,6 +570,21 @@ if __name__ == "__main__":
 print('anay\'s "laptop"')
 
 
+# simple codes 
+
+num = [23 , 45  , 73 , 47 , 67]
+
+num.append(44)
+num.remove(23)
+num.insert(3 , 99)
+num.pop(2)
+num.extend([22 , 76, 56, 41 , 11])
+del num[3:]
+
+print(num)
+
+################
+
 
 
 
