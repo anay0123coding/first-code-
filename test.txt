@@ -653,6 +653,42 @@ print(hex(10))
 
 #############
 
+# more codes 
+
+# swap two variables 
+
+a = 4
+b = 5
+
+c = a 
+a = b 
+b = c
+
+print(a)
+print(b)
+
+
+a = a + b   # a = 5 + 4 = 9
+b = a - b   # b = 9 - 5 = 4
+a = a - b   # a = 9 - 4 = 5
+
+print(a)
+print(b)
+
+a , b = b ,a 
+
+print(a)
+print(b)
+
+
+# important maths functions
+
+import math as m 
+
+print(m.sqrt(25))
+print(m.floor(3.8))
+print(m.ceil(2.1))
+print(m.pow(3,4))
 
 
 
