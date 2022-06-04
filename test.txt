@@ -691,6 +691,21 @@ print(m.ceil(2.1))
 print(m.pow(3,4))
 
 
+# code to print the greatest number out of three values taken from the user
+
+x = int(input("enter your number"))
+y = int(input("enter your number"))
+z = int(input("enter your number"))
+
+if x > y and x > z:
+    print(x , "is the greatest number")
+elif y > x and y > z:
+    print(y , "is the greatest number")
+elif z > x and z > x:
+    print(z , "is the greatest number")
+else:
+    print("all are equal")
+
 
 
 
