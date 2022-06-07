@@ -852,5 +852,55 @@ s2 = 'PQR'
 for i in range(4):
     print(s1[0:i+1]+s2[i:])
 
+# more codes 
+
+nums = [23,74,21,67,74]
+
+for num in nums:
+    if num%5 == 0:
+        print(num)
+        break
+else:
+    print("not found")
+
+
+x = int(input("enter your number here"))
+
+if x > 1:
+    for i in range(2,x):
+        if x % i == 0:
+            print(x , "is not a prime number")
+            break
+    else:
+        print(x , "is a prime number")
+else:
+    print(x , "is not a prime number")
+
+# more codes about array
+
+from array import *
+
+
+vals = array('i', [4,6,7,2,3])
+vals.insert(3,9)
+vals.reverse()
+print(vals)
+
+for i in range(len(vals)):
+    print(vals[i])
+
+for i in vals:
+    print(i)
+
+
+newArr = array(vals.typecode,(a for a in vals))
+
+print(newArr)
+
+j = 0
+while j < len(newArr):
+    print(newArr[j])
+    j +=1 
+
 
 
