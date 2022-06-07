@@ -819,7 +819,38 @@ for i in range(5, 0 ,-1):
         
     print()
 
-    
+
+
+
+# code for printing 
+ #1 2 3 4 
+ #2 3 4 
+ #3 4 
+ #4 
+  
+
+
+for i in range(5):
+    for j in range(i+1 , 5):
+        print(j , end = "")
+        
+
+
+    print()
+
+
+# code for printing
+# APQR 
+# ABQR
+# ABCR
+# ABCD
+
+
+
+s1 = 'ABCD'
+s2 = 'PQR'
+for i in range(4):
+    print(s1[0:i+1]+s2[i:])
 
 
 
