@@ -764,6 +764,10 @@ for i in range(1,5):
 
 # break and continue
 
+#### remark - the 'pass' keyword will behave as 'continue' keyword if we give an else block to the if block to which we have given the 'pass' 
+                  command . 'break' simply stops the loop. continue and pass commands will tell the loop to skip the code(as specified).
+                  the only difference is that pass needs an else block while continue command does not need it .
+
 
 
 # break
