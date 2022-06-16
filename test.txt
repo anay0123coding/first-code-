@@ -937,6 +937,16 @@ print(id(lst))
 update(lst)
 print("lst ",lst)
 
+def person(name, age = 19): # formal arguement
+    print(name)
+    print(age)
+
+
+person( age = 15,name = "anay" )  # actual arguement
+person("musk")
+
+
+
 
 
 
