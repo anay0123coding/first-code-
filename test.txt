@@ -979,3 +979,15 @@ def mul(*b):
 
 mul(5,7,7,9,2,4,65,7,2)
 
+
+def renew(x):
+    print(x)  # takes the value of 'a' as the value of 'x' is given before the print statement of the function
+    x = 6
+    print(x)  # takes the value of 'x' as it is given within the function after the print statement 
+
+
+a = 2
+renew(a)  # puts / renews the value of 'a' and gives the value of 'x' for the function
+print(a)  # prints the original value of 'a'
+
+
