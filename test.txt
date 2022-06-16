@@ -920,5 +920,23 @@ for i in range(n):
 
 print(arr)
 
+# functions 
+
+
+
+def update(lst):
+
+    print(id(lst))
+
+    lst[1] = 28
+    print(id(lst))
+    print("x" ,lst)
+
+lst = [10,29,47]
+print(id(lst))
+update(lst)
+print("lst ",lst)
+
+
 
 
