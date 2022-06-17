@@ -1004,5 +1004,29 @@ def person(name , **data):  # double star for printing the keywords as well
 
 person('anay' , age = 15 , town = 'mollarpur' ,mob = 8347355645)
 
+# global variable and local variable 
+
+a = 10  # global variable
+print(id(a))
+
+def something():
+    #global a # makes the 'a' within the function global . so the 'a' outside the function also takes the value of the local 'a'.
+    
+    a = 9
+    x = globals()['a']  # gives access to all the global variables and change to this value will affect all global values 
+    print(id(x))
+    print(" in fun", a) 
+
+    globals()['a'] = 15  # the 'a' within function is changed and thus affects all the global 'a'
+
+
+something()
+
+
+
+
+
+print(" outside" ,a)
+
 
 
