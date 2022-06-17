@@ -1010,7 +1010,7 @@ a = 10  # global variable
 print(id(a))
 
 def something():
-    #global a # makes the 'a' within the function global . so the 'a' outside the function also takes the value of the local 'a'.
+    global a # makes the 'a' within the function global . so the 'a' outside the function also takes the value of the local 'a'.
     
     a = 9
     x = globals()['a']  # gives access to all the global variables and change to this value will affect all global values 
@@ -1027,6 +1027,34 @@ something()
 
 
 print(" outside" ,a)
+
+# passing a list to function
+
+
+def count(lst):
+
+    even = 0 
+    odd = 0
+
+    for i in lst:
+        if i%2 == 0:
+            even += 1
+        else:
+            odd += 1
+
+    return even , odd
+
+
+
+lst = [45,77,23,84,62,76,12,74,79]
+
+
+even , odd = count(lst)
+print(even)
+print(odd)
+
+print("even : {} and odd : {}".format(even,odd)) # format gives the formatted style 
+
 
 
 
