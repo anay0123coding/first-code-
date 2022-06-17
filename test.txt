@@ -1058,3 +1058,31 @@ print("even : {} and odd : {}".format(even,odd)) # format gives the formatted st
 
 
 
+# code for selecting some names and then printing which name has letter more than four and which and four or less
+
+def count(name):
+
+    more_than_four = 0
+    four = 0
+    
+
+    for i in name:
+        if len(i) > 4:
+            more_than_four += 1
+        else:
+            four += 1
+
+    return more_than_four ,four
+
+name = ["anay" ," nabin" , "amit" , "arindam" , "debobroto"]
+
+more_than_four , four = count(name)
+
+print(more_than_four)
+print(four)
+
+print("more_than_four : {} and four : {}".format(more_than_four,four))
+
+
+
+
