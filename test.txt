@@ -991,3 +991,18 @@ renew(a)  # puts / renews the value of 'a' and gives the value of 'x' for the fu
 print(a)  # prints the original value of 'a'
 
 
+# keyword variable length arguement 
+
+def person(name , **data):  # double star for printing the keywords as well 
+
+    print(name)
+    
+    for i,j in data.items():
+        print(i,j)
+
+
+
+person('anay' , age = 15 , town = 'mollarpur' ,mob = 8347355645)
+
+
+
