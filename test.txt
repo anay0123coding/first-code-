@@ -1145,6 +1145,15 @@ def greet():
 
 greet()
 
+# factorial using recursion
 
+def fact(n):
+    if n == 0:
+        return 1   
+
+    return n * fact(n - 1)
+
+result = fact(int(input("enter the number whose factorial you want to get")))
+print(result)
 
 
