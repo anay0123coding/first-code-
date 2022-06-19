@@ -1156,4 +1156,9 @@ def fact(n):
 result = fact(int(input("enter the number whose factorial you want to get")))
 print(result)
 
+# basic lambda ( an anonymous function )
+
+f = lambda a,b : a + b
+result = f(5,6)
+print(result)
 
