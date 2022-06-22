@@ -1214,3 +1214,41 @@ def changer(func):
 
 x = changer(mul)
 x(6,2)
+
+
+# modules in python
+
+
+
+# code in calc.py
+
+
+
+
+def add(a,b):
+    return a + b
+
+def sub(a,b):
+    return a - b 
+
+def multi(a,b):
+    return a*b
+
+def div(a,b):
+    return a/b
+    
+    
+# code in demo.py
+
+
+from calc import *
+
+a = 9
+b = 7
+
+c = sub(a,b)
+
+print(c)
+
+
+
