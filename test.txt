@@ -1250,5 +1250,18 @@ c = sub(a,b)
 
 print(c)
 
+## code in demo.py
+
+import calc
+
+
+print("demo says " + __name__ )  # the first module __name__ is always main , __name__ is where the code starts as the first point of execution
+                                 # this code is printed as usual
+
+## code in calc.py
+
+
+print("hello" + __name__) # when we are importing calc in demo then the __name__ of calc will print 
+                          # the module name ,i.e, 'calc' in demo where the code is run
 
 
