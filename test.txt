@@ -1218,6 +1218,8 @@ x(6,2)
 
 # modules in python
 
+# quick remark :: we must save the modules (files) after writting a code to access the code while importing :D
+
 
 
 # code in calc.py
