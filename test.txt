@@ -1264,4 +1264,20 @@ print("demo says " + __name__ )  # the first module __name__ is always main , __
 print("hello" + __name__) # when we are importing calc in demo then the __name__ of calc will print 
                           # the module name ,i.e, 'calc' in demo where the code is run
 
+## code in calc.py
+
+
+import demo
+
+print("bad morning")  # now the code written in demo.py is not executed as we are importing demo.py as module and we are running the code in calc.py
+
+
+## code in demo.py
+
+def main():
+    print("good morning")
+
+
+if __name__ == "__main__":  # this ensures that the function is executed only when we execute the code in this file(module) and not in other files(modules)
+    main()
 
