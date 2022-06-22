@@ -1250,6 +1250,11 @@ c = sub(a,b)
 
 print(c)
 
+
+# special variable __name__ and __main__
+
+
+
 ## code in demo.py
 
 import calc
