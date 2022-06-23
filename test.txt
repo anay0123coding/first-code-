@@ -1288,3 +1288,42 @@ def main():
 if __name__ == "__main__":  # this ensures that the function is executed only when we execute the code in this file(module) and not in other files(modules)
     main()
 
+
+## in calc.py
+
+def add():
+    print("result 1 is"  __name__)
+
+def sub():
+    print("result 2 is")
+
+
+def main():
+    add()
+    sub()
+
+
+if __name__ == "__main__":  # the name variable will have a value main if we are running the code in this module as a stand alone module.
+    main()                  # if we are importing the module in any other module then name will print the module name
+    
+    
+## in demo.py
+
+from calc import add
+
+def fun1():
+    add()
+    print("from fun1")
+
+
+def fun2():
+    print("from fun2")
+
+
+def main():
+    fun1()
+    fun2()
+
+
+main()
+
