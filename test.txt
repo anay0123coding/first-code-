@@ -1328,3 +1328,4 @@ def main():
 main()
 
 # python is a functional programming , procedure oriented programming , object oriented programming 
+# class is a design . object is an instance of the design . class can be called blueprint. 
