@@ -1329,3 +1329,26 @@ main()
 
 # python is a functional programming , procedure oriented programming , object oriented programming 
 # class is a design . object is an instance of the design . class can be called blueprint. 
+
+
+# class
+
+class computer:  # we can put two things in a class : attributes (variables) and behaviour (methods/ functions)
+
+    def config(self): # self is the parameter or arguement of the function
+        print("i5, 16 gb ,1 tb ")
+
+
+
+
+
+com1 = computer()
+
+print(type(com1))
+
+computer.config(com1) # com1 is the value 
+
+com1.config() # config() will take com1 as the parameter or arguement
+
+a = 5 
+a.bit_length()
