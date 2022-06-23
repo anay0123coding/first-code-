@@ -1327,3 +1327,4 @@ def main():
 
 main()
 
+# python is a functional programming , procedure oriented programming , object oriented programming 
