@@ -1364,3 +1364,25 @@ com1.config() # config() will take com1 as the parameter or arguement
 
 a = 5 
 a.bit_length()
+
+
+#### more about init variable
+# oops binds methods to functions
+
+
+class computer:
+
+    def __init__(self,cpu,ram):  # init is to initialize the variables . self is arguement that is already being called along with object of the class.
+        self.cpu = cpu
+        self.ram = ram
+
+
+    def config(self):
+        print("config is " , self.cpu , self.ram)
+
+        
+
+com1 = computer('i3' ,4) # this command wil call the init method for us . we dont need to call init seperately. init wil get called for every object .
+com2 = computer('i7' , 8) # here com2 is the value for the self arguement . so while passing arguements to init , we are giving the number of arguements we need along                           # with self. self is one extra arguement .
+com1.config()
+com2.config()
