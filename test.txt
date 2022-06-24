@@ -1386,3 +1386,24 @@ com1 = computer('i3' ,4) # this command wil call the init method for us . we don
 com2 = computer('i7' , 8) # here com2 is the value for the self arguement . so while passing arguements to init , we are giving the number of arguements we need along                           # with self. self is one extra arguement .
 com1.config()
 com2.config()
+
+# another example of use of init variable
+
+class student:
+
+    def __init__(self,maths , science , ssc , computer , hindi):
+        self.maths = maths
+        self.science = science
+        self.ssc = ssc
+        self.computer = computer
+        self.hindi = hindi
+
+    def marks(self):
+        print(self.maths + self.science+ self.ssc + self.computer +self.hindi  )
+
+s1 = student(45,72,64,75,53)
+s2 = student(67,91,58,28,62)
+
+
+s1.marks()
+s2.marks()
