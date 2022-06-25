@@ -1458,7 +1458,7 @@ print(c1.age)
 class Car:
 
 
-    wheels = 4  # if we define a variable outside the init and inside the class , it is a class variable
+    wheels = 4  # if we define a variable outside the init and inside the class , it is a class variable.
 
     def __init__(self): # mil and car are instance variables
         self.mil = 10
