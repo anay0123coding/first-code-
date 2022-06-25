@@ -1473,3 +1473,28 @@ Car.wheels = 5  # we have to specify the class name as wheel is occupying the cl
 print(c1.mil, c1.com , c1.wheels)
 print(c2.mil, c2.com , c2.wheels)
 
+
+
+# some codes with class 
+
+class human:
+
+    legs = 2
+    arms = 2
+    head = 1
+
+    def __init__(self,confidence, nervousness):
+        self.confidence1 = confidence  
+        self.nervousness1 = nervousness
+        self.confidence = 23
+        self.nervousness = 54
+
+
+anay = human(45,76)
+an_idiot = human(23,99)
+
+
+print(anay.confidence1, anay.nervousness , anay.head)
+print(an_idiot.confidence , an_idiot.nervousness1 , an_idiot.arms)
+
+
