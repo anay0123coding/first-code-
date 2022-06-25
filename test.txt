@@ -1448,3 +1448,28 @@ print(c1.name)
 print(c2.name)
 print(c1.age)
 
+
+# variables in oops
+
+# variables are of two types ... instance variable and class(static) variable
+# namespace is an area where we create and store variables . it is of two types ... they are instance namespace and class namespace .
+
+
+class Car:
+
+
+    wheels = 4  # if we define a variable outside the init and inside the class , it is a class variable
+
+    def __init__(self): # mil and car are instance variables
+        self.mil = 10
+        self.com = "bugatti"
+
+c1 = Car()
+c2 = Car()
+
+c1.mil = 8
+Car.wheels = 5  # we have to specify the class name as wheel is occupying the class namespace ,i.e, it is a class variable
+
+print(c1.mil, c1.com , c1.wheels)
+print(c2.mil, c2.com , c2.wheels)
+
