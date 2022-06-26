@@ -1508,3 +1508,17 @@ class computer:
 com1 = computer()
 com1.config()
 print(com1.ram)
+
+
+# another example
+
+class car:
+
+    def __init__(self):  # we dont need to call init
+        self.ram = 16
+        self.gen = "i7"
+
+ltp1 = car()
+print(ltp1.gen)
+
+        
