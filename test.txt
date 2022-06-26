@@ -1497,4 +1497,14 @@ an_idiot = human(23,99)
 print(anay.confidence1, anay.nervousness , anay.head)
 print(an_idiot.confidence , an_idiot.nervousness1 , an_idiot.arms)
 
+# an example
 
+class computer:
+
+    def config(other):  # it is nor mandatory to give self as the parameter . any other parameter can be given.
+        other.ram = 8
+
+
+com1 = computer()
+com1.config()
+print(com1.ram)
