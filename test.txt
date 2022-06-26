@@ -1521,4 +1521,54 @@ class car:
 ltp1 = car()
 print(ltp1.gen)
 
-        
+
+
+# more on methods in oops 
+
+
+# we have three types of methods ... instance methods , class methods , static methods
+# instance methods are of two types .. accessor and mutators 
+# if we want just fetch the value of the varibles then we will use accessor and if we want to edit then we will use mutators
+
+
+class student:
+
+    school = "the heritage school"  # here school is class variable / static variable
+
+    def __init__(self ,m1 , m2 , m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+
+    def avg(self):  # this is an instance method as we are saying self which denotes that it belongs to an object
+        return (self.m1 + self.m2 + self.m3)/3
+
+    def get_m1(self):  # this is an accessor 
+        return self.m1
+
+    def set_m1(self,value):  # this is an mutator 
+        self.m1 = value
+
+    @classmethod  # a decorater to be used to indicate a class method
+    def get_school(cls): #  for instance method we use self keyword and for class methods we use cls keyword
+        return cls.school
+
+    @staticmethod
+    def info():
+        return ("this is student class")
+
+s1 = student(29,72,31)
+s2 = student(48,47,23)
+print(s1.m1)
+print(s1.get_m1())
+s1.set_m1(33)
+print(s2.avg())
+print(s1.m1)
+
+
+print(student.get_school())  # we dont specify any student . we special all the objects of the class 
+print(student.info())
+
+
+
+
