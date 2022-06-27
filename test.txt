@@ -1698,4 +1698,23 @@ b1.feature2() # there will be an error
 c1 = C()
 c1.feature1()
 
+# a simple example of a class inside a class
 
+class programming_langueges:
+
+    def __init__(self, toughness):
+        self.toughness = toughness
+
+    class java:
+
+        def __init__(self,difficulty):
+            self.difficulty = difficulty
+
+
+
+user1 = programming_langueges(454)
+
+print(user1.toughness)
+
+user2 = programming_langueges.java(99)
+print(user2.difficulty)
