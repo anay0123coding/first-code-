@@ -1660,6 +1660,42 @@ s1.show() # executes all the instructions given in the show method of the laptop
 
 
 
+# inheritance 
 
+# single inheritance - when there are two classes A and B and B is inheriting the features of A then we call it as a single level inheritance .
+# multi level inheritance - when another class C is there which inherits the features of class B and B is already inheriting the features of A then it is called multi #                           level inheritance .
+# multiple inheritance - when class C is inheriting the features of both A and B but B is not inheriting the features of A then it is called multiple inheritance .
+
+
+
+class A: 
+    def feature1(self):
+        print("feature 1 is working")
+
+    def feature2(self):
+        print("feature 2 is working")
+
+
+
+class B: 
+    def feature3(self):
+        print("feature 3 is working")
+
+    def feature4(self):
+        print("feature 4 is working")
+
+class C(A,B):  
+    def feature5(self):
+        print("feature 5 is working")
+
+a1 = A()
+a1.feature1()
+a1.feature2()
+
+b1 = B()
+b1.feature2() # there will be an error 
+
+c1 = C()
+c1.feature1()
 
 
