@@ -1613,5 +1613,53 @@ print(s1.get())
 print(anything.class_method())
 
 
+# class inside a class
+
+
+
+
+class Student:  # the object of the inner class should be inside the outer class
+
+    def __init__(self ,name ,rollno):
+        self.name = name
+        self.rollno = rollno
+        self.lap = self.Laptop() # lap is the object of the inner class
+
+    def show(self):
+        print(self.name , self.rollno)
+        self.lap.show()  # it calls the show method of the laptop class  
+
+    class Laptop:
+
+        def __init__(self):
+            self.brand = 'asus'
+            self.cpu = 'i7'
+            self.ram = 8 
+
+        def show(self):
+            print(self.brand , self.cpu , self.ram)
+
+s1 = Student("anay" , 2)
+s2 = Student("anita" , 3)
+
+s2.show()
+
+print(s1.lap.brand)
+
+lap1 = s1.lap
+lap2 = s2.lap
+
+print(id(lap1))
+print(id(lap2))
+
+lap3 = Student.Laptop()
+print(lap3.cpu)
+
+s1.show() # executes all the instructions given in the show method of the laptop class
+
+
+
+
+
 
 
