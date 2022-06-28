@@ -1763,6 +1763,15 @@ a1.feature1()  # here also mso(method resolution order) works as the code is exe
 # polymorphism is of 4 types - duck typing , operator overloading , method overloading , method overriding
 
 
+# printing factorial of a number
 
+n = int(input("enter the number"))
+
+
+j = 1
+for i in range(1,n+ 1):
+    j = j * i 
+
+print(j)
 
 
