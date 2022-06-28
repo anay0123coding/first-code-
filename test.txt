@@ -1757,6 +1757,12 @@ a1 = C()
 a1.feature1()  # here also mso(method resolution order) works as the code is executed from A as it is in the left hand side
 
 
+# polymorphism
+
+# polymorphism means many form .. .
+# polymorphism is of 4 types - duck typing , operator overloading , method overloading , method overriding
+
+
 
 
 
