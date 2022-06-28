@@ -1,4 +1,4 @@
-
+ 
 
 welcome to my first code in github
 
@@ -162,7 +162,6 @@ import time
 from pygame.constants import WINDOWHITTEST
 
 pygame.init()
-
 
 white = (255, 255 , 255)
 black = (0, 0, 0)
