@@ -1718,3 +1718,45 @@ print(user1.toughness)
 
 user2 = programming_langueges.java(99)
 print(user2.difficulty)
+
+# constructor in inheritance 
+
+class A:
+
+    def __init__(self):
+        print("in A init")
+
+    def feature1(self):
+        print("feature A is working")
+    def feature2(self):
+        print("feature 2 is working")
+
+#class B(A):
+class B:
+    def __init__(self):      # if we create an object of sub class it will first try to find init of sub class 
+                             # and if it is not found then it will call init of super class
+        
+        #super().__init__()
+        print("in B init")   
+
+    def feature1(self):
+        print("feature B is working")
+    def feature4(self):
+        print("feature 4 is working")
+
+class C(A,B):
+    def __init__(self):
+        super().__init__()  # here method resolution order works which means the code execution goes from left to right .
+                            # here A is on the left so its code is inherited by C and not the code of B
+        print("in C init")
+
+    
+
+
+a1 = C()
+a1.feature1()  # here also mso(method resolution order) works as the code is executed from A as it is in the left hand side
+
+
+
+
+
