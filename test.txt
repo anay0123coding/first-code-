@@ -1773,4 +1773,31 @@ for i in range(1,n+ 1):
 
 print(j)
 
+# duck typing
+
+
+class VS_code:
+    def execute(self):
+        print("interpreting")
+        print("running")
+
+class My_ide:
+
+    def execute(self):
+        print("compiling")
+        print("error checking")
+        print("interpreting")
+        print("running")
+
+
+class laptop:
+
+    def code(self, ide):  # it does not matter which class's ide (here,object) we are passing , it will still work but we should have same method (here, execute)
+                          # it does not matter which class it belongs to . it just should have the same method.
+        ide.execute()
+
+ide = VS_code()  # this can work individually
+ide = My_ide()   # this can also work individually
+lap1 = laptop()
+lap1.code(ide)
 
