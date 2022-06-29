@@ -1858,5 +1858,28 @@ print(a.__str__())
 print(s1) # the inbuild function does not print the value . we have to override the value  
 print(s1.__str__())
 
+# an example of duck typing
+
+class A :
+
+    def code (self):
+        
+        print("nothing really happening")
+
+
+class B:
+
+    def code(self):
+
+        print("does many things more ")
+
+
+class C :
+    def executable(self,laptop): # the laptop object should be assigned to any class except C (where it is actually)
+        laptop.code()
+
+laptop = B()  
+s1 = C()  # this should be assigned to the class C as it is going to call the method (executable) of class C
+s1.executable(laptop) # here the object is assigned to the method 
 
 
