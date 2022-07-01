@@ -1882,4 +1882,38 @@ laptop = B()
 s1 = C()  # this should be assigned to the class C as it is going to call the method (executable) of class C
 s1.executable(laptop) # here the object is assigned to the method 
 
+# method overloading 
+# method overloading means that if in a same class we have two (or more) same methods but the arguements (type or number) is different
+# method overloading is not there in python . in python we can't do this 
+# for example - student class has two methods named "average" but one of them has 2 arguements while the other has 3 arguements
+
+
+# method overriding means that if there are two classes (in one class it wont happen) and both the classes have the same name with the same parameter then it is known as method overriding 
+
+
+# an example of method overloading , it is not directly supported in python so we are doing it indirectly
+
+class student:
+
+    def __init__(self, m1 , m2):
+        self.m1 = m1
+        self.m2 = m2
+
+    def sum(self , a  = None, b = None , c = None):
+
+        s = 0
+
+        if a!= None and b!= None and c!= None:
+            s = a + b + c
+        elif a!= None and b!= None:
+            s = a + b
+        else:
+            s = a
+
+
+        return s
+
+
+s1 = student(23,71)
+print(s1.sum(23,72,98))
 
