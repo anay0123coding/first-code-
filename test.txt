@@ -1825,7 +1825,7 @@ class student:
         self.m1 = m1
         self.m2 = m2
 
-    def __add__(self,other):
+    def __add__(self,other):  # we need to overload the operator
         v1 = self.m1 + self.m2
         v2 = other.m1 + other.m2
         s3 = student(v1,v2)
