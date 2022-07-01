@@ -1917,3 +1917,21 @@ class student:
 s1 = student(23,71)
 print(s1.sum(23,72,98))
 
+
+
+# this is method overriding
+
+
+class A:
+
+    def show(self):
+        print("in B show")
+
+class B(A):
+
+    def show(self):  # this show method overrides the show method of its parent class(A)
+        print("in B show")
+
+
+a1 = B()
+a1.show()
