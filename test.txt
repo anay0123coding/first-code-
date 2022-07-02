@@ -1935,3 +1935,18 @@ class B(A):
 
 a1 = B()
 a1.show()
+
+
+
+# an example
+
+
+class python:
+
+    def __init__(slef, m1,m2): # an example to show that instead of self we can also take slef,i.e, we can take any arguement name
+        slef.m1 = m1
+        slef.m2 = m2
+
+
+s1 = python(34,65)
+print(s1.m1)
