@@ -1950,3 +1950,45 @@ class python:
 
 s1 = python(34,65)
 print(s1.m1)
+
+
+# abstract classes 
+
+
+# python does not by default support abstract classes but we can use a module named 'ABC' to use abstract classes 
+# 'ABC' stands for Abstract Base Classes
+# we cant create objects of abstract classes 
+
+from abc import ABC , abstractclassmethod, abstractmethod
+
+
+class computer(ABC):
+    @abstractmethod  # this is a decorator 
+    def process(self):
+        print("running") # this is the body
+                         # is this print statement wasn't there then we had to say 'pass' command to declare that we have no code here. such a method which has 
+                         # relation but not a definition is called abstract methods . the class containing the abstract method(at least one) is called abstract                                # classes 
+
+class laptop(computer): # laptop class is inheriting an abstract class , so we need to define the abstract method otherwise this will also be an abstract class 
+    def process(self):
+        print("its running")
+
+class programmer:
+    def work(self,com1):
+        print('solving bugs')
+        com1.process()
+
+class whiteboard(computer):  # if whiteboard didnot inherit the computer class then there would be no compulsion to have the abstract method of the abstract class
+    def write(self):         # but as we have written ' whiteboard(computer) ' so we have to define the abstract method of the abstract class computer ,i.e, process
+        print("its writing")
+
+
+
+#com1 = computer()
+#com1.process()
+com2 = laptop()
+#com2.process()
+com3 = whiteboard()
+prog1 = programmer()
+prog1.work(com3)
+
