@@ -1992,3 +1992,18 @@ com3 = whiteboard()
 prog1 = programmer()
 prog1.work(com3)
 
+
+
+# iterator 
+
+
+nums = [3,6,2,7]
+
+it = iter(nums)
+
+print(it.__next__())
+
+print(next(it))
+
+for i in nums:
+    print(i)
