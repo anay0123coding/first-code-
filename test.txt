@@ -2007,3 +2007,37 @@ print(next(it))
 
 for i in nums:
     print(i)
+    
+    
+    
+    
+# way to build our own iterator . we need two methods , iter() and next()
+# iter() will give the objects of the iterator and next() will give the next element
+
+
+
+class top_ten:
+
+    def __init__(self):
+        self.num = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+
+        if self.num <= 10:
+            val = self.num
+            self.num += 1 
+            return val
+        else:
+            raise StopIteration  # this is way to stop the for loop here as there are no specific limit given to the for loop. we need to raise an execption
+
+values = top_ten()
+
+print(values.__next__())  
+print(next(values))        
+for i in values:           # it seems like iterator will print the value 3 times due to the previous two print statements but it doesn't . 
+    print(i)               # since we got the values of 1 and 2 due to the previous two print statements ,it does not procees further to print 1 and 2 again.
+
+
