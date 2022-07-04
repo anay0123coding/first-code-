@@ -2091,3 +2091,18 @@ for i in values:
 
     print(i)
 
+# an example of generator and an innovative way to print the odd numbers less than the given value(here, 10)
+
+def generators():
+
+    i = 1
+    print(i)
+    while i <= 10:
+        i = i + 2
+        yield i 
+        
+
+    
+test_try = generators()
+for i in test_try:
+    print(i)
