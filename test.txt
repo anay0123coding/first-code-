@@ -2041,3 +2041,34 @@ for i in values:           # it seems like iterator will print the value 3 times
     print(i)               # since we got the values of 1 and 2 due to the previous two print statements ,it does not procees further to print 1 and 2 again.
 
 
+# generators 
+
+
+def topten():
+ 
+    yield 5  # as we are using yield so this function is a generator now . 
+    yield 4  # we can write multiple yield statements but we cant write multiple return statements as the first return wil be taken 
+    yield 6
+    yield 7
+    
+
+
+values = topten()
+print(values.__next__())
+print(values.__next__())
+print(next(values))
+
+for i in values:
+    print(i)
+
+# example to show that we cant write multiple return statements 
+
+def personal_use():
+
+    return 6
+    return 7
+    return 8
+
+
+print(personal_use())
+
