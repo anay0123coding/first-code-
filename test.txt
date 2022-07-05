@@ -2106,3 +2106,47 @@ def generators():
 test_try = generators()
 for i in test_try:
     print(i)
+
+
+
+# errors in python 
+
+# syntactical errors - this can be called compile time errors .suppose we are forgetting to put a (:) after if statement 
+#                      then this can be called syntactical error or compile time error 
+
+# logical error - the code will be compiled , the code will run , we will get an output , but we will get a wrong output 
+
+# run time error - the code is working but somewhere between the code execution we are getting an error .  
+#                  for e.g. - if we input 6/0 then it will give us an error . this is run time error. 
+#                  this is an user input error .
+
+# normal statement are those which will not give us error
+# critical statement are those which can give us error
+
+
+
+
+
+a = 5  # normal statement
+b = 2  # normal statement 
+
+try:
+    print("resource open")
+    print(a/b)  # critical statement 
+    k = int(input('enter a number'))
+    print(k)
+    
+except ZeroDivisionError as e:
+    print("hey , you cannot divide a number by zero :", e)
+
+except ValueError as e:
+    print("invalid input")
+
+
+except Exception as e: # this will only run when we have an error   # this handles all the other errors
+    print("something went wrong")
+
+    
+finally:  # this will run irrespective of the statement has exception or not  
+    print("resource close")
+
