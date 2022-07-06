@@ -2206,3 +2206,37 @@ print("bye") # this is executed by the main thread
 
 # so , python is both compiled and interpreted languege .
 # behind the scene , our code gets compiled and interpreted .
+
+
+# an example of multi threading 
+
+from threading import Thread
+from time import *
+
+
+class A(Thread):
+    def run(self):
+        for i in range(5):
+            print("interpreting")
+            sleep(1)
+
+class B(Thread):
+    def run(self):
+        for i in range(4):
+            print("compiling")
+            sleep(1)
+
+code1 = A()
+code2 = B()
+
+code1.start()
+sleep(0.2)
+code2.start()
+
+code1.join()
+print("job done")
+code2.join()  # even if we had placed this statement before print("job done") then also it would have given the same result
+
+
+
+
