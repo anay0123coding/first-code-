@@ -2188,3 +2188,21 @@ t1.join()  # this asks the main thread to wait for t1 and t2 to be executed and 
 t2.join()
 
 print("bye") # this is executed by the main thread 
+
+
+## PYTHON - INTERPRETED OR COMPILED ?
+
+# compiler can convert any languege to any languege 
+# interpreter executes the code line by line 
+
+# when we write a code (so called, source code) in python , it first gets compiled to a byte code.
+# then it is interpreted to machine languege , by a virtual machine 
+
+# virtual machine software ensures that the byte code runs on any cpu irrespective of there architectures 
+# if we have a vm(virtual machine) software then we are good to go .
+# this vm is specific for every langueges . python is run on pvm.
+
+# whatever we code gets converted in byte code and then it is interpreted by a vm ( for python , pvm)
+
+# so , python is both compiled and interpreted languege .
+# behind the scene , our code gets compiled and interpreted .
