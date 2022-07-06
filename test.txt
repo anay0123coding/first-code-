@@ -2149,4 +2149,42 @@ except Exception as e: # this will only run when we have an error   # this handl
     
 finally:  # this will run irrespective of the statement has exception or not  
     print("resource close")
+    
+    
+    
+    
+# thread - it can be called a light weight process
+# every execution has one thread by default .  that is the main thread 
 
+# creation of threads
+
+from time import sleep 
+from threading import *
+
+
+class hello(Thread):
+    def run(self):
+        for i in range(5):
+            print("hello")
+            sleep(1)
+
+
+class hi(Thread):
+    def run(self):
+        for i in range(5):
+            print("hi")
+            sleep(1)
+
+
+t1 = hello()
+t2 = hi()
+
+t1.start()  # instead of calling run() we have to call start() . this is because start wil internally call a mehtod called run()
+            # so , in both the classes we have defined run method as it is there in Thread class . other methods wont work there .
+sleep(0.2)    # this command ensures gap between two executions
+t2.start()  
+
+t1.join()  # this asks the main thread to wait for t1 and t2 to be executed and then it executes bye 
+t2.join()
+
+print("bye") # this is executed by the main thread 
