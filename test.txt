@@ -1993,7 +1993,6 @@ prog1 = programmer()
 prog1.work(com3)
 
 
-
 # iterator 
 
 
