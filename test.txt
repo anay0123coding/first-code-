@@ -2237,5 +2237,16 @@ print("job done")
 code2.join()  # even if we had placed this statement before print("job done") then also it would have given the same result
 
 
+# an example of abstract classes 
 
+from abc import  ABC , abstractmethod
+
+
+class coding(ABC):
+    @abstractmethod
+    def code(self):
+        print("compiling")
+
+code1 = coding()
+code1.code()
 
