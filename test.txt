@@ -2344,3 +2344,36 @@ else:
     print("not found")
 
 
+# binary search with for loop
+
+
+# in binary search we have to take the first value as l and the last value as u . then we have to take out the mid point(as index number) of l and u
+# then we have to check that if the mid point is matching with the given value . if it is matching then we will have the desired result .
+# if it is not matching then we have to check whether the given input is less than or greater than n . if it less than n then we have to 
+# increase the lower limit by 1, if it is greater than n then we have to lower the u . the loop checks for the values if it is matching 
+# with the given value . it changes the l or the u and then again finds the mid point of the two new values. 
+# the process keeps repeatating
+
+
+
+list = [3,6,23,77,89,95]
+
+n = int(input("enter the number you want to search"))
+
+
+l = 0
+u = len(list) - 1  
+for i in range(len(list)-1):
+
+    mid = (l + u)// 2
+
+    if list[mid] == n:
+        print("found at" , mid + 1)
+        break
+    else:
+        if  list[mid]<n:
+            l = mid + 1
+        else:
+            u = mid - 1
+else:
+    print("not found")
