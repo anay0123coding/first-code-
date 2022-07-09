@@ -2398,3 +2398,24 @@ def sort(nums):
 nums = [5,3,8,6,7,2]
 sort(nums)
 print(nums)
+
+
+
+# a practice of bubble sorting 
+
+def sorter(n):
+    for i in range(len(nums)-1 , 0 , -1):
+        for j in range(i):
+            if nums[j] > nums[j + 1]:
+                # vary = nums[j]
+                # nums[j] = nums[j + 1]
+                # nums[j + 1] = vary
+                nums[j] , nums[j + 1] = nums[j + 1] , nums[j]   # this can also be used in python to swap
+    print(nums)
+
+
+
+
+nums = [32,54,123,8787,1234,6263,211]
+sorter(nums)
+
