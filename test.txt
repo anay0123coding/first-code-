@@ -2377,3 +2377,24 @@ for i in range(len(list)-1):
             u = mid - 1
 else:
     print("not found")
+
+
+
+
+# bubble sorting
+
+# swaping is an important concept in sorting 
+
+def sort(nums):
+    for i in range(len(nums)-1 , 0 , -1): # this loop is for iterating the inner loop for the required number of times
+        for j in range(i):  # this internal loop is to do the function of swapping
+            if nums[j] > nums[j + 1]:
+                temp = nums[j]
+                nums[j] = nums[j + 1]
+                nums[j + 1] = temp
+
+
+
+nums = [5,3,8,6,7,2]
+sort(nums)
+print(nums)
