@@ -2419,3 +2419,52 @@ def sorter(n):
 nums = [32,54,123,8787,1234,6263,211]
 sorter(nums)
 
+
+
+
+# selective sorting
+# this is better than bubble sorting as this involves swapping only once during every iteration 
+# in bubble sorting multiple times swapping is done in each iteration
+
+
+def sort(nums):
+
+    for i in range(len(nums)- 1):  # also applicable ----> range(len(nums))
+        minpos = i
+        for j in range(i,len(nums)):
+            if nums[j] < nums[minpos]:
+                minpos = j
+
+        # nums[minpos] , nums[i] = nums[i] , nums[minpos]    # also applicable instead of the following statements
+        temp = nums[minpos]
+        nums[minpos] = nums[i]
+        nums[i] = temp
+
+        print(nums)
+
+
+nums = [5,7,2,8,9,3]
+
+sort(nums)
+print(nums)
+
+# another example
+
+
+def sort(list_nums):
+
+    for i in range(len(list_nums)):
+        minval = i
+        for j in range(i,len(list_nums)):
+            if list_nums[j] < list_nums[minval]:
+                minval = j
+
+        list_nums[i] , list_nums[minval] = list_nums[minval] , list_nums[i]
+
+        print(list_nums)
+
+list_nums = [54,29,60,86,2,27,26,6,88,24,21,76,7,67,]
+sort(list_nums)
+print(list_nums)
+
+
