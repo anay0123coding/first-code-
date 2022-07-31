@@ -2468,3 +2468,28 @@ sort(list_nums)
 print(list_nums)
 
 
+
+# special fibonacci sequence 
+
+
+
+n = int(input("enter the number of terms"))
+
+a = 0
+b = 1
+print(a, "+", end ="")
+print(b, "+", end ="")
+j = 1
+
+for i in range(n-2):
+    c = a + b
+    a = b
+    b = c
+    
+    if i == n -3:
+        print(b, end = "")
+    else:
+        print(b, "+", end ="")
+
+    j += b
+print( "=", j)
