@@ -2493,3 +2493,41 @@ for i in range(n-2):
 
     j += b
 print( "=", j)
+
+
+# some practice of coding 
+
+#dictionary_practice
+
+from webbrowser import get
+
+
+numbers = {"name" : "anay" , "address": "mallarpur" , "mobileno." : 5636544865}
+print(numbers.get("address","not there"))
+numbers["name"] = "jack"
+print(numbers)
+keys = ["fav_sub" , "worst_sub"]
+values = ["technology" , "languege"]
+numbers2 = dict(zip(keys, values))
+print(numbers2)
+print(numbers["mobileno."])
+
+#list_practice
+
+num = [2,3,6,8,1,7]
+print(num[1])
+if num[2] == 0:
+    print("No")
+else:
+    print("Yes")
+num[1] = "anay"
+print(num)
+num[3] = "wow!"
+print(num)
+num[2] = num[3]
+print(num)
+for i in range(len(num)):
+    print(num[i])
+for i in range(len(num)):
+    num[i-1] = num[i]
+print(num)
