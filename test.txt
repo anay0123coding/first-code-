@@ -2531,3 +2531,17 @@ for i in range(len(num)):
 for i in range(len(num)):
     num[i-1] = num[i]
 print(num)
+
+
+
+# code to print the sum of digits of numbers 
+
+n = int(input("enter a number"))
+s = 0
+
+while n > 0:
+    digit = n % 10
+    s += digit
+    n = n // 10
+
+print(s)
