@@ -2545,3 +2545,7 @@ while n > 0:
     n = n // 10
 
 print(s)
+
+
+# there is a difference between 'is' and '=='  . 'is' says that both belongs to the same address. 
+# '==' says that both just contains the same value and doesn't say anything about the same address. 
