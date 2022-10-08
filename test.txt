@@ -2549,3 +2549,20 @@ print(s)
 
 # there is a difference between 'is' and '=='  . 'is' says that both belongs to the same address. 
 # '==' says that both just contains the same value and doesn't say anything about the same address. 
+
+
+# usage of random function to print as many random numbers as many we want,i.e , as many as the user wants
+
+import random
+
+n = int(input("enter the range till which you want a random number"))
+a = int(input("how many numbers do you want?"))
+
+def randomize():
+    for i in range(a):
+        m = random.randrange(n)
+        print(m)
+        i += 1
+
+
+randomize()
