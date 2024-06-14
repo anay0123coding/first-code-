@@ -1,2 +1,21 @@
 welcome to c++ codes
+
+#####################################################################################
+DATATYPES
+#include<iostream>
+using namespace std;
+
+int main() {
+
+/*
+    int a = 1223;
+    cout<< a << endl;
+    char b = 'v';
+    cout<< b <<endl;
+    float f = 1.2;
+    cout<< f;
+*/
+}
+
+
   
