@@ -77,3 +77,46 @@ int main() {
     cin >> a >> b;
     cout<<"value of a and b are " << a << " and "<< b << endl;
 }
+
+*** conditions
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int a;
+    cout <<" enter the value of a";
+    cin >> a;
+    if (a>0){
+        cout<< "a is negative";
+    }
+    else{
+        if (a<0){
+            cout<< "a is positive";
+        }
+        else{
+            cout<<"a is 0";
+        }
+    }   
+    
+ 
+}
+
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int a;
+    cout <<" enter the value of a";
+    cin >> a;
+    if (a>0){
+        cout<< "a is negative";
+    }
+    else if(a<0) {
+        cout<< "a is positive";
+        
+    }
+   
+ 
+}
