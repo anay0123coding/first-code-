@@ -34,4 +34,19 @@ int main() {
     
 }
 
+
+######################################################################################
+LOOPS
+
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int a;   //to consider a interger 'a'
+    cin >> a;
+    cout<< "the number is:" << a << endl;
+ 
+}
+
   
