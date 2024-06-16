@@ -1,7 +1,7 @@
  
 
 welcome to my first code in github
-
+ 
 #selective sorting
 
 def sort(nums):
