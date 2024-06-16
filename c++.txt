@@ -64,3 +64,16 @@ int main() {
     }    
  
 }
+
+
+**display values
+
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int a,b;
+    cin >> a >> b;
+    cout<<"value of a and b are " << a << " and "<< b << endl;
+}
