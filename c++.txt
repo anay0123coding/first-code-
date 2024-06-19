@@ -790,7 +790,7 @@ FUNCTIONS
 #include<iostream>
 using namespace std;
 
-int power (int a , int b){
+int power (int a , int b){   // the arguements need not be 'a' and 'b' .. you can give other names like 'num1' and 'num2'
     int ans = 1;
     for (int i = 1;i<=b;i++){
         ans = ans * a;
