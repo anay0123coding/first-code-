@@ -867,3 +867,26 @@ int main() {
         cout<<"is not a prime no."<<endl;
     }
 }
+
+#############################################################################################
+#############################################################################################
+ARRAYS
+
+#include<iostream>
+using namespace std;
+
+int main(){
+  // intializing and printing
+  /*
+  int second[2] = {5,6};
+  cout<<second[1];
+  */
+  // intializing with some values. not all values are given
+  int third[15] = {2,7};
+  int n = 15;
+  for (int i = 0;i<=n;i++){
+    cout<<third[i]<< " ";
+  }
+
+    
+}
