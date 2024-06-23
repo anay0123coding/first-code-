@@ -2,6 +2,7 @@ welcome to c++ codes
 
 #####################################################################################
 DATATYPES
+
 #include<iostream>
 using namespace std;
 
