@@ -1290,3 +1290,39 @@ int main(){
     cout<<"the number you wanted is in the index "<<searchnumber(num,5,10);
     
 }
+
+
+//SQUARE ROOT USING BINARY SEARCH
+
+#include<iostream>
+using namespace std;
+
+int sqrtroot(int n){
+    int start = 0;
+    int end = n;
+    int mid = start + (end - start)/2;
+    int ans = -1;
+    while(start<end){
+        int square = mid*mid;
+        if(square==n){
+            return mid;
+        }
+        else if(square<n){
+            ans = mid;
+            start = mid + 1;
+        }
+        else{
+            end = mid - 1 ;
+        }
+        mid = start + (end - start)/2;
+
+    }
+    return ans;
+}
+
+int main(){
+    int n;
+    cout<<"enter the number "<<endl;
+    cin>>n;
+    cout<<"the answer is "<<sqrtroot(n);
+}
