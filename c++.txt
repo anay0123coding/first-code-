@@ -1376,3 +1376,27 @@ int main(){
     int num[4] = {10,20,30,40};
     cout<<allocatebooks(num,4,2);
 }
+
+
+//SELECTIVE SORTING
+#include<iostream>
+using namespace std;
+
+void selectivesorting(int arr[],int n){
+    for (int i = 0;i<n-1;i++){
+        int minindex = i;
+        for(int j = i + 1;j<n-1;j++){
+            if(arr[j] < arr[minindex]){
+                minindex = j;
+            }
+        }
+        swap(arr[minindex] ,arr[i]);
+    }
+    
+    
+}
+
+int main(){
+    int num[5] = {56,33,27,21,11};
+    selectivesorting(num,5);
+}
