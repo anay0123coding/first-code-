@@ -2637,3 +2637,25 @@ def printWord(N):
 N = input("enter a number")
 printWord(N)
 
+
+//LENGTH OF THE CHAR ARRAY
+
+#include<iostream>
+using namespace std;
+
+int getlength(char num[]){
+    int count = 0;
+    for (int i = 0;num[i] != '\0';i++){
+        count++;
+    }
+    return count;
+}
+
+int main(){
+    char ch[20];
+
+    cout<<"enter the name"<<endl;
+    cin>>ch;
+
+    cout<<"the length of the array is "<<getlength(ch);
+}
