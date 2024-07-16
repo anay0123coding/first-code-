@@ -1442,3 +1442,21 @@ void insertionsorting(int arr[],int n){
         arr[j+ 1] = temp;
     }
 }
+
+
+######################################
+CHARACTER ARRAYS
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    char ch[20];
+
+    cout<<"enter the name"<<endl;
+    cin>>ch;
+    ch[2] = '\0';
+
+    cout<<"your name is:";
+    cout<<ch;
+}
