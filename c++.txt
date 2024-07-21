@@ -1568,3 +1568,16 @@ int main(){
     cout<<"the gcd is "<<ans;
     
 }
+
+#################################################################################
+POINTERS
+
+//ARRAY AND POINTERS
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[10];
+    
+    cout<<"the address of the first position is"<<arr;
+}
