@@ -1580,4 +1580,5 @@ int main(){
     int arr[10];
     
     cout<<"the address of the first position is"<<arr;
+    // instead of 'arr' , we can write '&arr[0]'
 }
