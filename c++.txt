@@ -1697,6 +1697,10 @@ int factorial(int n){
     
     //recursive relation
     return n*factorial(n-1);
+    // also can be written as 
+    // int smallerproblem = factorial(n-1);
+    // int biggerproblem = n * smallerproblem;
+    // return biggerproblem;
     
 }
 
