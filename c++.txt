@@ -1712,3 +1712,124 @@ int main(){
 
     
 }
+
+
+
+//LENGTH OF THE CHAR ARRAY
+
+#include<iostream>
+using namespace std;
+
+int getlength(char num[]){
+    int count = 0;
+    for (int i = 0;num[i] != '\0';i++){
+        count++;
+    }
+    return count;
+}
+
+int main(){
+    char ch[20];
+
+    cout<<"enter the name"<<endl;
+    cin>>ch;
+
+    cout<<"the length of the array is "<<getlength(ch);
+}
+
+//REVERSE OF THE CHAR ARRAY
+
+#include<iostream>
+using namespace std;
+
+void reversearray(char num[],int n){
+    int start = 0;
+    int end = n - 1;
+    while(start<end){
+        swap(num[start++],num[end--]);
+    }
+}
+
+int getlength(char num[]){
+    int count = 0;
+    for (int i = 0;num[i] != '\0';i++){
+        count++;
+    }
+    return count;
+}
+
+
+int main(){
+    char ch[20];
+
+    cout<<"enter the name"<<endl;
+    cin>>ch;
+    int len = getlength(ch);
+    cout<<"the reverse of the array is";
+    reversearray(ch,len);
+    cout<<"the name is";
+    cout<<ch;
+}
+
+
+//FIBONACCI SERIES USING RECURSION
+
+#include<iostream>
+using namespace std;
+
+int fib(int n){
+    if(n==0){
+        return 0;
+    }
+    if(n==1){
+        return 1;
+    }
+
+    int ans = fib(n - 1) + fib(n - 2);
+    return ans;
+
+}
+
+int main(){
+    int n;
+    cin>>n;
+    cout<<fib(n);
+}
+
+
+################################################################################
+RECURSION ANS BINARY SEARCH
+
+//CHECKING IF THE ARRAY IS SORTED OR NOT
+
+#include<iostream>
+using namespace std;
+
+bool issorted(int arr[],int size){
+    if(size== 0 || size == 1){
+        return true;
+    }
+    
+    if(arr[0]>arr[1]){
+        return false;
+    }
+    else{
+        int remainingpart = issorted(arr + 1,size -1);
+        return remainingpart;
+    }
+}
+
+
+int main(){
+    int arr[5] = {2,3,9,7,8};
+    
+    bool ans = issorted(arr,5);
+
+    if (ans){
+        cout<<"the array is sorted"<<endl;
+    }
+    else{
+        cout<<"the array is not sorted"<<endl;
+    }
+
+}
