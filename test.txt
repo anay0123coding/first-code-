@@ -2718,3 +2718,41 @@ int main(){
     cin>>n;
     cout<<fib(n);
 }
+
+
+################################################################################
+RECURSION ANS BINARY SEARCH
+
+//CHECKING IF THE ARRAY IS SORTED OR NOT
+
+#include<iostream>
+using namespace std;
+
+bool issorted(int arr[],int size){
+    if(size== 0 || size == 1){
+        return true;
+    }
+    
+    if(arr[0]>arr[1]){
+        return false;
+    }
+    else{
+        int remainingpart = issorted(arr + 1,size -1);
+        return remainingpart;
+    }
+}
+
+
+int main(){
+    int arr[5] = {2,3,9,7,8};
+    
+    bool ans = issorted(arr,5);
+
+    if (ans){
+        cout<<"the array is sorted"<<endl;
+    }
+    else{
+        cout<<"the array is not sorted"<<endl;
+    }
+
+}
