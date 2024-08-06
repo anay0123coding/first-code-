@@ -1868,3 +1868,50 @@ int main(){
 
 
 }
+
+
+//  RECURSION WITH BINARY SEARCH
+#include<iostream>
+using namespace std;
+
+void print(int arr[],int start,int end){
+    for(int i = start;i<end;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
+
+bool binarysearch(int *arr,int start,int end,int key){
+    cout<<endl;
+    print(arr,start,end);
+    //BASE CASE
+    //IF NOT FOUND
+
+    if(start > end){
+        return false;
+    }
+
+    int mid = start + (end - start)/2;
+    cout<<"value of mid is"<<arr[mid]<<endl;
+    //IF FOUND
+    if(arr[mid]==key){
+        return true;
+    }
+
+    if(arr[mid]<key){
+        return binarysearch(arr,mid+1,end,key);
+    }
+    else{
+        return binarysearch(arr,start,mid-1,key);
+    }
+}
+
+
+int main(){
+    int arr[10]= {2,3,5,6,8,12,34,58,66,99};
+    
+    int key = 12;
+    
+    cout<<"present or not ->"<<binarysearch(arr,0,9,key);
+}
