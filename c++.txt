@@ -1840,11 +1840,11 @@ int main(){
 using namespace std;
 
 bool linearsearch(int arr[],int size,int key){
-    //BASE CASE
+    //BASE CASE(IF NOT FOUND)
     if(size==0){
         return false;
     }
-
+    //BASE CASE(IF FOUND)
     if(arr[0]==key){
         return true;
     }
