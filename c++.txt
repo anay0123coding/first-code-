@@ -1915,3 +1915,27 @@ int main(){
     
     cout<<"present or not ->"<<binarysearch(arr,0,9,key);
 }
+
+
+//RECURSION WITH STRING
+
+#include<iostream>
+using namespace std;
+
+void revstr(string &str,int i,int j){
+    if(i>j){
+        return ;
+    }
+    swap(str[i],str[j]);
+    i++;
+    j--;
+
+    return revstr(str,i,j);
+}
+
+int main(){
+    string arr = "anay";
+    revstr(arr,0,arr.length()-1);
+    cout<<arr;
+
+}
