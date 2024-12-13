@@ -2167,3 +2167,71 @@ int main(){
 
 }
 
+
+////// CODE TO INSERT ELEMENTS IN LINKED LIST AT THE BACK ( LIKE IN AN ARRAY)
+
+#include<iostream>
+using namespace std;
+
+class node {
+    public:
+    int data;
+    node *next ;
+
+    // constructor create
+    node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
+};
+
+// code to insert new node at head position
+void insertAtHead(node* &head, int d){
+    node *temp = new node(d);
+    temp -> next = head;
+    head = temp;
+}
+
+// code to insert new node at tail postion 
+void insertAtTail(node* &tail,int d){
+    node *temp = new node(d);
+    tail -> next = temp;
+    tail = temp;
+
+}
+
+// code to print the linked list 
+void print(node* &head){
+    node * temp = head;
+
+    while(temp != NULL ){
+        cout<<temp->data<<endl;
+        temp = temp ->next;
+    }cout<<endl;
+        
+
+}
+
+
+
+
+
+int main(){
+
+    // new node created
+    node *nd1 = new node(10);
+    //cout<< nd1 -> data;
+
+    // point the head to the new created node
+    node *head = nd1;
+    node *tail = nd1;
+
+    print(head);
+
+    insertAtTail(tail,12);
+
+    print(head);
+
+
+
+}
