@@ -2417,10 +2417,14 @@ void insertAtPosition(node* &tail,node* &head , int position ,int d){
 }
 
 // code to delete at any position
-void deleteatanypos(node* &head, int position){
+void deleteatanypos( node* &tail , node* &head, int position){
+    node* temp = head;
+
+    
+
     // first position
     if(position == 1){
-        node* temp = head;
+        
         head = head -> next;
         // memory free karo
         temp ->next = NULL;
@@ -2428,8 +2432,7 @@ void deleteatanypos(node* &head, int position){
     }
 
     // other positions
-    else{
-
+    else {
         // start count from the first position
         node* prev = NULL;
         node* curr = head;
@@ -2441,12 +2444,15 @@ void deleteatanypos(node* &head, int position){
             count ++;
             
         }
-
-        prev -> next = curr -> next;
+        prev -> next = curr-> next;
         curr -> next = NULL;
+        if(prev -> next == NULL){
+            tail = prev;
+        }
         delete curr;
     }
     
+
 }
 
 // code to print the linked list 
@@ -2489,11 +2495,18 @@ int main(){
     cout<<"head"<<head ->data<<endl;
     cout<<"tail"<<tail ->data<<endl;
 
-    deleteatanypos(head,2);
+    deleteatanypos(tail,head,4);
     print(head);
+
+    cout<<"head"<<head ->data<<endl;
+    cout<<"tail"<<tail ->data<<endl;
 
 
 }
+
+
+
+
 
 
 
