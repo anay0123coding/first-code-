@@ -2695,7 +2695,117 @@ int main(){
 
 }
 
+////////
+///CIRCULAR LINKED LIST
 
+
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    //constructor
+    Node(int data){
+        this ->data = data;
+        this ->next = NULL;
+    }
+
+    //destructor
+    ~Node(){
+        if(this->next != NULL){
+            delete next;
+            next = NULL;
+        }
+    }
+};
+
+
+void insertatanypos(Node* &tail, int element ,int d){
+    //for first node creation
+
+    if(tail == NULL){
+        Node* newnode = new Node(d);
+        tail = newnode;
+        newnode->next = newnode;
+    }
+
+    //for further node creations
+    Node* curr = tail;
+
+    while(curr->data != element){
+        curr = curr->next;
+    }
+    Node* temp = new Node(d);
+    temp ->next = curr-> next;
+    curr -> next = temp;
+}
+
+void print(Node* &tail){
+    Node* temp = tail;
+    if(tail == NULL){
+        cout<<"list is empty"<<endl;
+        return;
+    }
+    do{
+        cout<<tail->data<<endl;
+        tail = tail ->next;
+    }while(tail!= temp);
+    cout<<endl;
+}
+
+void deleteatpos(Node* &tail, int value){
+    // for only one node
+    if(tail == NULL){
+        cout<<"list is empty ,please check again"<<endl;
+        return ;
+    }
+    //for one or more than one nodes
+    else{
+        
+        Node* prev = tail;
+        Node* curr = prev -> next;
+
+        while(curr->data != value){
+            prev = curr;
+            curr = curr -> next;
+        }
+
+        prev ->next = curr->next;
+
+        //for 1 node
+        if(prev == curr){
+            tail = NULL;
+        }
+        //for 2 or more
+        else if(tail == curr){
+            tail = prev;
+        }
+
+        curr -> next = NULL;
+        delete curr;
+
+    }
+}
+
+int main(){
+
+    Node* tail = NULL;
+
+    insertatanypos(tail,4,3);
+    print(tail);
+
+    insertatanypos(tail,3,5);
+    print(tail);
+
+    deleteatpos(tail,5);
+    print(tail);
+
+
+}
 
 
 
