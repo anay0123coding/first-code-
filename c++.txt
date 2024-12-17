@@ -2837,3 +2837,35 @@ void reverselinkedlist(Node* &head, Node* curr , Node* prev){
     curr -> next = prev;
 }
 
+
+//// CODE TO GET THE MIDDLE OF LINKED LIST 
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
+};
+
+int getlength(Node* &head){
+    int count = 0;
+    while(head != NULL){
+        count ++;
+        head = head -> next;
+    }
+
+    return count ;
+}
+
+int lengthoflinkedlist(Node* &head){
+    int length = getlength(head);
+    int ans = (length+1)/2;
+    return ans;
+}
