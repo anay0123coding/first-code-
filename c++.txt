@@ -2869,3 +2869,45 @@ int lengthoflinkedlist(Node* &head){
     int ans = (length+1)/2;
     return ans;
 }
+
+
+                         /////ANOTHER EFFICIENT WAY /////
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
+};
+
+Node* middleoflinkedlist(Node* head){
+    // for the length of 0 or 1
+    if(head == NULL || head -> next == NULL){
+        return head;
+    }
+    // for the length of 2
+    if(head -> next -> next == NULL){
+        return head -> next;
+    }
+
+    Node* slow = head;
+    Node* fast = head -> next;
+
+    while(fast != NULL){
+        fast = fast -> next;
+        if(fast != NULL){
+            fast = fast -> next;
+        }
+        slow = slow -> next;
+    }
+    return slow;
+
+
+}
