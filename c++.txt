@@ -2956,3 +2956,48 @@ Node* kreverse(Node* head,int k){
     //step 3: return head of linked list
     return prev;
 }
+
+
+/////CODE TO CHECK WHETHER A LINKED LIST IS CIRCULAR OR NOT
+
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
+};
+
+bool iscircular(Node* head){
+    // zero nodes
+    if(head == NULL){
+        return true;
+    }
+    // 1 or more than 1 node
+
+    Node* temp = head -> next;
+    while(temp != head && temp != NULL){
+        temp = temp -> next;
+    }
+    if(temp == head){
+        return true;
+    }
+
+    return false;
+}
+
+int main(){
+    if(iscircular){
+        cout<<"linked list is circular in nature"<<endl;
+    }
+    else{
+        cout<<"linked list is not circular "<<endl;
+    }
+}
