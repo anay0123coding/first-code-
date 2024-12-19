@@ -3042,4 +3042,5 @@ void removeduplicate(Node* head){
             curr -> next = next_next;
         }
     }
+    return head;
 }
