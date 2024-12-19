@@ -3001,3 +3001,45 @@ int main(){
         cout<<"linked list is not circular "<<endl;
     }
 }
+
+
+//// CODE TO REMOVE DUPLICATE ELEMENTS IN A SORTED LINKED LIST
+
+
+#include<iostream>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* next;
+
+    Node(int data){
+        this -> data = data;
+        this -> next = NULL;
+    }
+    ~Node(){
+        if(this -> next != NULL){
+            delete next;
+            next = NULL;
+        }
+    }
+};
+
+void removeduplicate(Node* head){
+    // zero nodes
+    if(head == NULL){
+        return ;
+    }
+
+    // one or more than one 
+    Node* curr = head;
+    while(curr != NULL){
+        if((curr -> next != NULL) && curr -> data  == curr -> next -> data){
+            Node* next_next = curr -> next -> next;
+            Node* nodetodelete = curr ->next;
+            delete(nodetodelete);
+            curr -> next = next_next;
+        }
+    }
+}
