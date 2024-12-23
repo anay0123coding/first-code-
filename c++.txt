@@ -3267,6 +3267,12 @@ int main(){
     st.pop();
     cout<<st.peek()<<endl;
 
+    // to print the array stack
+    while(st.isempty()!= true){
+        cout<<st.peek()<<endl;
+        st.pop();
+    }
+
 }
 
 
