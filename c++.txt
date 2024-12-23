@@ -3269,3 +3269,84 @@ int main(){
 
 }
 
+
+/////////TWO STACKKS IN AN ARRAY
+
+#include<iostream>
+#include<stack>
+using namespace std;
+
+class Stack{
+    public:
+    int *arr;
+    int size;
+    int top1;
+    int top2;
+
+    //constructor(or behaviour)
+    Stack(int size){
+        this -> size = size;
+        arr = new int[size];
+        top1 = -1;
+        top2 = size;
+    }
+
+    void push1(int element){
+        if(top2 - top1 > 1){
+            top1 ++;
+            arr[top1] = element;
+        }
+        else{
+            cout<<"stack overflow";
+        }
+    }
+
+    void push2(int element){
+        if(top2 - top1 > 1){
+            top2 --;
+            arr[top2] = element;
+        }
+        else{
+            cout<<"stack overflow";
+        }
+    }
+
+    void pop1(){
+        if(top1 >= 0){
+            top1 --;
+        }
+        else{
+            cout<<"stack underflow";
+        }
+    }
+
+    void pop2(){
+        if(top2 < size){
+            top2 ++;
+        }
+        else{
+            cout<<"stack underflow";
+        }
+
+    }
+
+    int peek(){
+        if(top1 >= 0 && top2 < size){
+            return arr[top1];
+        }
+    }
+
+    
+
+};
+
+int main(){
+    Stack st(10);
+    st.push1(5);
+    st.push2(34);
+    st.push1(44);
+    st.push1(78);
+    st.push2(22);
+
+    cout<<st.peek();
+}
