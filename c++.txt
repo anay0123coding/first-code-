@@ -3356,3 +3356,25 @@ int main(){
 
     cout<<st.peek();
 }
+
+
+///// REMOVE MIDDLE ELEMENT OF A STACK
+
+<<<<< LOGIC ONLY >>>>>
+
+void deletemidddle(Stack* &inputstack,int count,int size){
+    // base case
+    if(count == size/2){
+        inputstack.pop();
+        return;
+    }
+
+    int num = inputstack.top();
+    inputstack.pop();
+
+    // call recursion
+
+    deletemidddle(inputstack,count + 1,size);
+
+    inputstack.push(num);
+}
