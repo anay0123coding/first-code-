@@ -4592,3 +4592,130 @@ int main(){
 
 }
 
+
+
+///////// FLATTEN A BST INTO A LINKED LIST
+
+#include<iostream>
+#include<vector>
+#include<queue>
+using namespace std;
+
+class Node{
+    public:
+    int data;
+    Node* left ;
+    Node* right;
+
+    Node(int d){
+        this -> data = d;
+        this -> left = NULL;
+        this -> right = NULL;
+    }
+
+};
+
+void levelordertraversal(Node* root){
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
+    while(!q.empty()){
+        Node* temp = q.front();
+        q.pop();
+        if(temp == NULL){
+            cout<<endl;
+            if(!q.empty()){
+                q.push(NULL);
+            }
+        }
+        else{
+            cout<<temp -> data<<" ";
+            if(temp -> left){
+                q.push(temp->left);
+            }
+            if(temp -> right){
+                q.push(temp ->right);
+            }
+        }
+    }
+}
+
+Node* insertbst(Node* root,int d){
+    // base case
+    if(root == NULL){
+        root = new Node(d);
+        return root;
+    }
+
+    if(d > root->data){
+        root -> right = insertbst(root -> right,d);
+    }
+    else{
+        root -> left = insertbst(root -> left ,d);
+    }
+
+    return root;
+}
+
+void getinput(Node* &root){
+    int data;
+    cin>>data;
+
+    while(data != -1){
+        root = insertbst(root,data);
+        cin>> data;
+    }
+}
+
+// code to insert the inorder elements of bst in an array
+void inorder(Node* root,vector<int> &arr){
+    if(root == NULL){
+        return;
+    }
+
+    inorder(root->left,arr);
+    arr.push_back(root->data);
+    inorder(root->right,arr);
+}
+
+
+
+void fltnbsttoll(Node* root){
+    vector<int> val;
+    inorder(root,val);
+
+    int n = val.size();
+    Node* newroot = new Node(val[0]);
+    Node* curr = newroot;
+
+    for(int i = 0;i<n;i++){
+        Node* temp = new Node(val[i]);
+        curr -> right = temp;
+        curr -> left = NULL;
+        curr = temp;
+
+
+    }
+
+    curr -> right = NULL;
+    curr -> left = NULL;
+
+    
+}
+
+
+
+int main(){
+
+    Node* root = NULL;
+    cout<<"enter the data for binary search tree"<<endl;
+    getinput(root);
+
+    cout<<"printing the binary tree"<<endl;
+    levelordertraversal(root);
+
+    fltnbsttoll(root);
+
+
+}
+
