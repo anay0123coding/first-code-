@@ -4963,7 +4963,7 @@ void kthsmallestele(int* arr,int s,int e,int k){
         pq.push(i);
     }
 
-    for(int i = k;i<e;i++){
+    for(int i = k;i<=e;i++){
         if(pq.top()>arr[i]){
             pq.pop();
             pq.push(arr[i]);
@@ -4974,9 +4974,5 @@ void kthsmallestele(int* arr,int s,int e,int k){
 }
 
 int main(){
-
-    
-
-
 
 }
